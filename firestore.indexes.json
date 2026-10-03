@@ -1,0 +1,13 @@
+{
+  "indexes": [
+    { "collectionGroup": "attempts", "queryScope": "COLLECTION_GROUP", "fields": [{ "fieldPath": "status", "order": "ASCENDING" }, { "fieldPath": "deadline", "order": "ASCENDING" }] },
+    { "collectionGroup": "questions", "queryScope": "COLLECTION_GROUP", "fields": [{ "fieldPath": "inBank", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "questions", "queryScope": "COLLECTION_GROUP", "fields": [{ "fieldPath": "inBank", "order": "ASCENDING" }, { "fieldPath": "subject", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "exams", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "isPublished", "order": "ASCENDING" }, { "fieldPath": "createdAt", "order": "DESCENDING" }] },
+    { "collectionGroup": "exams", "queryScope": "COLLECTION", "fields": [{ "fieldPath": "isPublished", "order": "ASCENDING" }, { "fieldPath": "attemptCount", "order": "DESCENDING" }] }
+  ],
+  "fieldOverrides": [
+    { "collectionGroup": "questions", "fieldPath": "subject", "indexes": [{ "order": "ASCENDING", "queryScope": "COLLECTION" }, { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }] },
+    { "collectionGroup": "questions", "fieldPath": "inBank", "indexes": [{ "order": "ASCENDING", "queryScope": "COLLECTION" }, { "order": "ASCENDING", "queryScope": "COLLECTION_GROUP" }] }
+  ]
+}
